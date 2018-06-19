@@ -5,20 +5,26 @@ load('./Datasets/krvskp.mat')
 %%%% Estimate the arities of the features/class label %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 arities=[];
-for feat = 1:size(data,2)
-   arities(feat) =length(unique(data(:,feat)));
+for feat = 1:size(X_data,2)
+   arities(feat) =length(unique(X_data(:,feat)));
 end
-arities(size(data,2)+1)=length(unique(labels));
+arities(size(X_data,2)+1)=length(unique(Y_labels));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Select the features using our suggested algorithms %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Now we will select the topK features with our high-order criteria
-% JMIplus and CMIMplus 
+% Now we will select the topK features with our four high-order criteria
+% JMI-3, JMI-4, CMIM-3 and CMIM-4
 topK=10;
-Selected_with_JMIplus = JMIplus(data,labels, topK, arities);
-disp('Selected features using JMI+:')
-disp(Selected_with_JMIplus)
-Selected_with_CMIMplus = CMIMplus(data,labels, topK, arities);
-disp('Selected features using CMIM+:')
-disp(Selected_with_CMIMplus)
+Selected_with_JMI3 = JMI3(X_data,Y_labels, topK, arities);
+disp('Selected features using JMI-3:')
+disp(Selected_with_JMI3)
+Selected_with_JMI4 = JMI4(X_data,Y_labels, topK, arities);
+disp('Selected features using JMI-4:')
+disp(Selected_with_JMI4)
+Selected_with_CMIM3 = CMIM3(X_data,Y_labels, topK, arities);
+disp('Selected features using CMIM-3:')
+disp(Selected_with_CMIM3)
+Selected_with_CMIM4 = CMIM4(X_data,Y_labels, topK, arities);
+disp('Selected features using CMIM-4:')
+disp(Selected_with_CMIM4)
