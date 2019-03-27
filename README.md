@@ -2,7 +2,7 @@
 
 
 Matlab code for the methods presented in the paper **(under review)** <br/>
-Efficient Feature Selection Using Shrinkage Estimators, K. Sechidis, L. Azzimonti, G. Corani, J. Weatherall, G. Brown <br/>
+Efficient Feature Selection Using Shrinkage Estimators, K. Sechidis, L. Azzimonti, A. Pocock, G. Corani, J. Weatherall, G. Brown <br/>
 
 ## Novel Shrinkage estimators (Section 3)
 * mi_Ind_JS.m - Implements our shrinkage estimator for mutual information (Section 3.2)
