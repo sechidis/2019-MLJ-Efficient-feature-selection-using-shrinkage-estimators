@@ -1,7 +1,7 @@
-# 2018-Efficient Feature Selection Using Shrinkage Estimators
+# 2019-Efficient Feature Selection Using Shrinkage Estimators
 
 
-Matlab code for the methods presented in the paper **(under review)** <br/>
+Matlab code for the methods presented in the paper <br/>
 Efficient Feature Selection Using Shrinkage Estimators, K. Sechidis, L. Azzimonti, A. Pocock, G. Corani, J. Weatherall, G. Brown <br/>
 
 ## Novel Shrinkage estimators (Section 3)
